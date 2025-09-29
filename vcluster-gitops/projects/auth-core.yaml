@@ -11,7 +11,7 @@ spec:
     namespace: argocd
     sso:
       enabled: true
-      host: https://argocd-vcp.gke-demo.vcluster.dev/
+      host: https://argocd.gke-demo.vcluster.dev/
       assignedRoles:
         - role:admin
     project:
