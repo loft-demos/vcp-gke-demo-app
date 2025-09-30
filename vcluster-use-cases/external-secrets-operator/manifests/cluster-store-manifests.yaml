@@ -45,7 +45,7 @@ roleRef:
 apiVersion: external-secrets.io/v1
 kind: ClusterSecretStore
 metadata:
-  name: eso-demo-cluster-secret-store
+  name: workload-identity-demo-cluster-secret-store
   labels:
     demos.loft.sh/eso-demo-cluster-store: 'true'
 spec:
@@ -57,6 +57,15 @@ spec:
           serviceAccountRef:
             name: workload-identity-demo
             namespace: vc-workload-identity-demo
+---
+apiVersion: external-secrets.io/v1
+kind: ClusterSecretStore
+metadata:
+  name: eso-demo-cluster-secret-store
+  labels:
+    demos.loft.sh/eso-demo-cluster-store: 'true'
+spec:
+  provider:
     kubernetes:
       # with this, the store is able to pull only from `eso-demo` namespace
       remoteNamespace: eso-demo
