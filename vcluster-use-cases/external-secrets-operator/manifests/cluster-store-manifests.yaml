@@ -45,9 +45,9 @@ roleRef:
 apiVersion: external-secrets.io/v1
 kind: ClusterSecretStore
 metadata:
-  name: workload-identity-demo-cluster-secret-store
+  name: gcp-secrets-manager-cluster-store
   labels:
-    demos.loft.sh/eso-demo-cluster-store: 'true'
+    demos.vcluster.com/gcp-secrets-manager-cluster-store: 'true'
 spec:
   provider:
     gcpsm:
