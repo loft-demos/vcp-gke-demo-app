@@ -57,7 +57,6 @@ spec:
           serviceAccountRef:
             name: workload-identity-demo
             namespace: vc-workload-identity-demo
-  provider:
     kubernetes:
       # with this, the store is able to pull only from `eso-demo` namespace
       remoteNamespace: eso-demo
